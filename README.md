@@ -132,6 +132,7 @@ python -m maze_hgt plot --run outputs/ppo --out outputs/ppo-learning.png
 | `maze_hgt/rl.py`、`evaluate.py` | PPO・GRPO、分布外・反事実評価 |
 | `maze_hgt/play.py`、`render.py`、`cli.py` | 実行・再生、盤面表示、CLI |
 | `config/`、`tests/` | 実験設定と自動テスト |
+| `outputs/ppo_stable2/` | 事前学習・強化学習済みモデル |
 
 参考文献
 
