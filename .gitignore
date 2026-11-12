@@ -1,0 +1,29 @@
+# 実験の出力と学習済み重み
+/outputs/
+/replay/
+*.pt
+*.pth
+*.ckpt
+
+# Python の仮想環境とビルド成果物
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+
+# テストと開発ツールのキャッシュ
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+/htmlcov/
+
+# OS のメタデータ
+.DS_Store
+._*
+__MACOSX/
+Thumbs.db

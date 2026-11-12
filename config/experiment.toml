@@ -1,0 +1,86 @@
+[runtime]
+seed = 1729
+device = "auto"
+threads = 4
+
+[generation]
+min_height = 7
+max_height = 15
+min_width = 7
+max_width = 15
+min_depth = 1
+max_depth = 3
+min_items = 5
+max_items = 11
+min_enemies = 2
+max_enemies = 5
+max_extra_doors = 3
+density = 0.35
+pareto = 1.9
+max_hp = 32
+max_turns = 100
+recipes = ["key", "breach", "combo", "death", "mixed"]
+
+[search]
+mode = "auto"
+budget = 12000
+exact_tiles = 64
+combat_budget = 800
+
+[model]
+dim = 48
+heads = 4
+layers = 5
+
+[data]
+relation_train = 300
+relation_val = 100
+train_worlds = 40
+val_worlds = 16
+validation_rollouts = 12
+queries_per_class = 12
+axis_repeats = 24
+
+[optimizer]
+lr = 0.001
+graph_batch = 8
+sequence_batch = 4
+bptt = 12
+gamma = 0.99
+
+[reward]
+goal = 1.0
+death = 1.0
+turn = 0.01
+hp = 0.0
+item = 0.0
+
+[stages.1]
+epochs = 30
+score = "macro_f1"
+[stages.1.goals]
+macro_f1 = {min = 0.78}
+"logic.f1" = {min = 0.78}
+"hop.3.accuracy" = {min = 0.70}
+
+[stages.2]
+epochs = 22
+
+[stages.3]
+epochs = 22
+
+[stages.4]
+epochs = 22
+
+[stages.5]
+epochs = 30
+
+[rl]
+updates = 120
+environments = 12
+ppo_epochs = 4
+unroll = 16
+sequence_batch = 8
+curriculum_levels = 3
+group_worlds = 3
+group_size = 4

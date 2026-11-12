@@ -1,0 +1,7 @@
+{
+  "algorithm": "ppo",
+  "updates": 500,
+  "best_validation_clear_rate": 0.84375,
+  "curriculum_level": 0,
+  "from_scratch": false
+}

@@ -1,0 +1,35 @@
+[runtime]
+seed = 2718
+device = "cpu"
+threads = 2
+
+[generation]
+min_height = 7
+max_height = 9
+min_width = 7
+max_width = 9
+max_depth = 2
+max_items = 8
+min_enemies = 2
+max_enemies = 3
+max_turns = 45
+density = 0.50
+
+[model]
+dim = 32
+heads = 4
+layers = 5
+
+[data]
+relation_train = 96
+relation_val = 40
+queries_per_class = 8
+axis_repeats = 20
+
+[optimizer]
+lr = 0.0015
+graph_batch = 12
+
+[stages.1]
+epochs = 14
+patience = 8
